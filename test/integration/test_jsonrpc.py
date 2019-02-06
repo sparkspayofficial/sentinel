@@ -16,12 +16,12 @@ def test_sparksd():
     config_text = SparksConfig.slurp_config_file(config.sparks_conf)
     network = 'mainnet'
     is_testnet = False
-    genesis_hash = u'00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6'
+    genesis_hash = u'00000a5c6ddfaac5097218560d5b92d416931cfeba1abf10c81d1d6a232fc8ea'
     for line in config_text.split("\n"):
         if line.startswith('testnet=1'):
             network = 'testnet'
             is_testnet = True
-            genesis_hash = u'00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c'
+            genesis_hash = u'000005f15ec2b9e4495efb539fb5b113338df946291cccd8dfd192bb68cd6dcf'
 
     creds = SparksConfig.get_rpc_creds(config_text, network)
     sparksd = SparksDaemon(**creds)
@@ -29,7 +29,7 @@ def test_sparksd():
 
     assert hasattr(sparksd, 'rpc_connection')
 
-    # Sparks testnet block 0 hash == 00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c
+    # Sparks testnet block 0 hash == 000005f15ec2b9e4495efb539fb5b113338df946291cccd8dfd192bb68cd6dcf
     # test commands without arguments
     info = sparksd.rpc_command('getinfo')
     info_keys = [
