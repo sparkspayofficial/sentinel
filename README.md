@@ -31,7 +31,7 @@ Make sure the local Sparks daemon running is at least version 12.1 (120100)
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/sparkspay/sentinel.git && cd sentinel
+    $ git clone https://github.com/sparkspayofficial/sentinel.git && cd sentinel
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
@@ -67,11 +67,11 @@ To view debug output, set the `SENTINEL_DEBUG` environment variable to anything 
 
 ## Contributing
 
-Please follow the [SparksCore guidelines for contributing](https://github.com/sparkspay/sparks/blob/master/CONTRIBUTING.md).
+Please follow the [SparksCore guidelines for contributing](https://github.com/sparkspayofficial/sparks/blob/master/CONTRIBUTING.md).
 
 Specifically:
 
-* [Contributor Workflow](https://github.com/sparkspay/sparks/blob/master/CONTRIBUTING.md#contributor-workflow)
+* [Contributor Workflow](https://github.com/sparkspayofficial/sparks/blob/master/CONTRIBUTING.md#contributor-workflow)
 
     To contribute a patch, the workflow is as follows:
 
